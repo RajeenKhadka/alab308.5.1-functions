@@ -52,26 +52,7 @@ function stringsLongerThan(stringArray, number) {
     return newArray;
 }
 
-//Alternative way:
-// function stringsLongerThan3(arr, num) {
-//     // Using array filter method
-//     return arr.filter((word) => word.length > num);
-// }
-
 console.log(" - The string longer than the numbers are:", stringsLongerThan(names, 5));
-
-// const stringsLongerThan2 = (stringArray, number) => {
-//     let newArray = [];
-//     //Empty array created
-//     for(let i = 0; i < stringArray.length; i++){
-//         if(stringArray[i].length > number){
-//             newArray.push(stringArray[i]);
-//             //This for loop checks the strings individually and compares their length to the number
-//             //If the above condition is true, then it adds the string to the empty array 'newArray'
-//         }
-//     }
-//     return newArray;
-// }
 
 // console.log(" - The string longer than the numbers are:", stringsLongerThan2(names,3));
 console.log("");
@@ -115,24 +96,8 @@ function change() {
 
 console.log(change());
 
-// const sumOfAges = DATA.age.reduce(getSumOfAges);
-
-// function getSumOfAges(accumulator, element){
-//     return accumulator + element;
-// }
-
-// console.log(sumOfAges);
-
-// const array1 = [1, 4, 9, 16];
-
-// // Pass a function to map
-// const map1 = array1.map((x) => x * 2);
-
-// console.log(map1);
-// // Expected output: Array [2, 8, 18, 32]
-
-const sumOfAges = DATA.reduce((accumulator, currentValue) => accumulator + (+currentValue.age), 0);      //When using reduce() method on a object array, you must supply an initial value which is 0. 
-
+const sumOfAges = DATA.reduce((accumulator, currentValue) => accumulator + (+currentValue.age), 0);      
+//When using reduce() method on a object array, you must supply an initial value which is 0. 
 let avgAgeOfDATA = sumOfAges / DATA.length;
 
 console.log(`The sum of the ages of the object array is ${sumOfAges}`);
